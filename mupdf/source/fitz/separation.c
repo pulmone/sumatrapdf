@@ -121,7 +121,7 @@ void fz_set_separation_behavior(fz_context *ctx, fz_separations *sep, int separa
 		fz_throw(ctx, FZ_ERROR_GENERIC, "can't control non-existent separation");
 
 	if (beh == FZ_SEPARATION_DISABLED && !sep->controllable)
-		beh = FZ_SEPARATION_DISABLED_RENDER;
+        beh = (fz_separation_behavior)FZ_SEPARATION_DISABLED_RENDER;
 
 	shift = ((2*separation) & 31);
 	separation >>= 4;

@@ -132,59 +132,6 @@ static MenuDef menuDefFile[] = {
 #endif
     //] ACCESSKEY_ALTERNATIVE
     {
-        _TRN("&Print..."),
-        CmdPrint,
-    },
-    {
-        kMenuSeparator,
-        0,
-    },
-    //[ ACCESSKEY_ALTERNATIVE // PDF/XPS/CHM specific items are dynamically removed in RebuildFileMenu
-    {
-        _TRN("Open Directory in &Explorer"),
-        CmdOpenWithExplorer,
-    },
-    {
-        _TRN("Open Directory in Directory &Opus"),
-        CmdOpenWithDirectoryOpus,
-    },
-    {
-        _TRN("Open Directory in &Total Commander"),
-        CmdOpenWithTotalCommander,
-    },
-    {
-        _TRN("Open Directory in &Double Commander"),
-        CmdOpenWithDoubleCommander,
-    },
-    {
-        _TRN("Open in &Adobe Reader"),
-        CmdOpenWithAcrobat,
-    },
-    {
-        _TRN("Open in &Foxit Reader"),
-        CmdOpenWithFoxIt,
-    },
-    {
-        _TRN("Open &in PDF-XChange"),
-        CmdOpenWithPdfXchange,
-    },
-    //| ACCESSKEY_ALTERNATIVE
-    {
-        _TRN("Open in &Microsoft XPS-Viewer"),
-        CmdOpenWithXpsViewer,
-    },
-    //| ACCESSKEY_ALTERNATIVE
-    {
-        _TRN("Open in Microsoft &HTML Help"),
-        CmdOpenWithHtmlHelp,
-    },
-    //] ACCESSKEY_ALTERNATIVE
-    // further entries are added if specified in gGlobalPrefs.vecCommandLine
-    {
-        _TRN("Send by &E-mail..."),
-        CmdSendByEmail,
-    },
-    {
         kMenuSeparator,
         0,
     },
@@ -209,10 +156,6 @@ static MenuDef menuDefFile[] = {
 
 //[ ACCESSKEY_GROUP View Menu
 static MenuDef menuDefView[] = {
-    {
-        _TRN("Command Palette"),
-        CmdCommandPalette,
-    },
     {
         _TRN("&Single Page"),
         CmdSinglePageView,

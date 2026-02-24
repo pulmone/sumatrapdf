@@ -989,10 +989,10 @@ static void SetFrameTitleForTab(WindowTab* tab, bool needRefresh) {
     }
 
     if (!IsUIRightToLeft()) {
-        tab->frameTitle.Set(str::Format("%s %s- %s", titlePath, docTitle.Get(), kSumatraWindowTitle));
+        tab->frameTitle.Set(str::Format("%s", titlePath));
     } else {
         // explicitly revert the title, so that filenames aren't garbled
-        tab->frameTitle.Set(str::Format("%s %s- %s", kSumatraWindowTitle, docTitle.Get(), titlePath));
+        tab->frameTitle.Set(str::Format("%s", titlePath));
     }
     if (needRefresh && tab->ctrl) {
         // TODO: this isn't visible when tabs are used
@@ -4774,18 +4774,6 @@ static LRESULT FrameOnCommand(MainWindow* win, HWND hwnd, UINT msg, WPARAM wp, L
 
         case CmdCopyFilePath:
             CopyFilePath(tab);
-            break;
-
-        case CmdCommandPalette:
-            RunCommandPallette(win, nullptr);
-            break;
-
-        case CmdCommandPaletteNoFiles:
-            RunCommandPallette(win, ">");
-            break;
-
-        case CmdCommandPaletteOnlyTabs:
-            RunCommandPallette(win, "@");
             break;
 
         case CmdClearHistory:
